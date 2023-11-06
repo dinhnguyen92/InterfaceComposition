@@ -3,7 +3,7 @@ using InterfaceComposition.Utils;
 using System;
 using System.Net.Mail;
 
-namespace InterfaceComposition.DomainEntities.KnowledgeEngine.Contact
+namespace InterfaceComposition.DomainEntities.UserManagement
 {
     public class EmailAddress : BaseEntityWithId<string>, IEquatable<EmailAddress>
     {

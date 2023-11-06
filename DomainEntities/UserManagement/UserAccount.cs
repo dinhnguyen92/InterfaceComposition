@@ -1,5 +1,4 @@
 ﻿using InterfaceComposition.DomainEntities.Core;
-using InterfaceComposition.DomainEntities.KnowledgeEngine.Contact;
 
 namespace InterfaceComposition.DomainEntities.UserManagement
 {
