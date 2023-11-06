@@ -4,13 +4,13 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace InterfaceComposition.REST.Payload.Receivers
+namespace InterfaceComposition.REST.Payload.Retrievers
 {
-    public abstract class BasePayloadReceiver<TPayload>
+    public abstract class BasePayloadRetriever<TPayload>
     {
         protected HttpRestClient RestClient { get; }
 
-        public BasePayloadReceiver(HttpRestClient restClient)
+        public BasePayloadRetriever(HttpRestClient restClient)
         {
             RestClient = restClient;
         }

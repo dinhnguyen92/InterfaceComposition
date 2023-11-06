@@ -3,7 +3,7 @@ using InterfaceComposition.DataQueriers;
 using InterfaceComposition.DomainEntities.UserManagement;
 using InterfaceComposition.REST.ApiRouting;
 using InterfaceComposition.REST.Paging;
-using InterfaceComposition.REST.Payload.Receivers;
+using InterfaceComposition.REST.Payload.Retrievers;
 using InterfaceComposition.REST.Payload.Senders;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace InterfaceComposition.ApiClients
         IEntityListerByUrlParamsViaApi<Subscription, SubscriptionUrlParamFilter>
     {
         private BsonPayloadSender DefaultPayloadSender { get; }
-        private BsonPayloadReceiver<PagedList<Subscription>> SubscriptionsReceiver { get; }
+        private BsonPayloadRetriever<PagedList<Subscription>> SubscriptionsReceiver { get; }
 
         public CompositeSubscriptionApiClient(
             string apiBaseUrl,
@@ -24,7 +24,7 @@ namespace InterfaceComposition.ApiClients
             base(apiBaseUrl, "accountSubscriptions", defaultRequestHeaders)
         {
             DefaultPayloadSender = new BsonPayloadSender(DefaultRestClient);
-            SubscriptionsReceiver = new BsonPayloadReceiver<PagedList<Subscription>>(DefaultRestClient);
+            SubscriptionsReceiver = new BsonPayloadRetriever<PagedList<Subscription>>(DefaultRestClient);
         }
 
         BasePayloadSender IEntityCreatorViaApi<Subscription>.PayloadSender => DefaultPayloadSender;
@@ -34,7 +34,7 @@ namespace InterfaceComposition.ApiClients
             .CreateEntityAsync(prototype);
 
         EntityApiRouter IEntityListerByUrlParamsViaApi<Subscription, SubscriptionUrlParamFilter>.Router => DefaultEntityApiRouter;
-        BasePayloadReceiver<PagedList<Subscription>> IEntityListerByUrlParamsViaApi<Subscription, SubscriptionUrlParamFilter>.PayloadReceiver => SubscriptionsReceiver;
+        BasePayloadRetriever<PagedList<Subscription>> IEntityListerByUrlParamsViaApi<Subscription, SubscriptionUrlParamFilter>.PayloadRetriever => SubscriptionsReceiver;
         public Task<PagedList<Subscription>> ListAccountSubscriptions(
             PagingParameters pagingParams,
             SubscriptionUrlParamFilter urlParamFilter) =>

@@ -5,13 +5,13 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace InterfaceComposition.REST.Payload.Receivers
+namespace InterfaceComposition.REST.Payload.Retrievers
 {
-    public class BsonPayloadReceiver<TPayload> :
-        BasePayloadReceiver<TPayload>
+    public class BsonPayloadRetriever<TPayload> :
+        BasePayloadRetriever<TPayload>
         where TPayload : class
     {
-        public BsonPayloadReceiver(HttpRestClient restClient) : base(restClient)
+        public BsonPayloadRetriever(HttpRestClient restClient) : base(restClient)
         {
         }
 

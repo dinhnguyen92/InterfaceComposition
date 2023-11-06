@@ -1,7 +1,7 @@
 ﻿using InterfaceComposition.DataFilters;
 using InterfaceComposition.REST.ApiRouting;
 using InterfaceComposition.REST.Paging;
-using InterfaceComposition.REST.Payload.Receivers;
+using InterfaceComposition.REST.Payload.Retrievers;
 using InterfaceComposition.REST.UrlParameters;
 using System.Threading.Tasks;
 
@@ -11,7 +11,7 @@ namespace InterfaceComposition.DataQueriers
         where TEntity : class
         where TEntityUrlParamFilter : IEntityUrlParamFilter
     {
-        protected BasePayloadReceiver<PagedList<TEntity>> PayloadReceiver { get; }
+        protected BasePayloadRetriever<PagedList<TEntity>> PayloadRetriever { get; }
         protected EntityApiRouter Router { get; }
 
         public Task<PagedList<TEntity>> GetEntityPagedListAsync(
@@ -19,7 +19,7 @@ namespace InterfaceComposition.DataQueriers
             TEntityUrlParamFilter? entityUrlParamFilter)
         {
             var allParameters = pagingParams.Concat(entityUrlParamFilter?.ToUrlParameters() ?? UrlParameterList.Empty);
-            return PayloadReceiver.GetAsync(Router.EntityListRoute.UrlEncodedText, allParameters);
+            return PayloadRetriever.GetAsync(Router.EntityListRoute.UrlEncodedText, allParameters);
         }
     }
 }

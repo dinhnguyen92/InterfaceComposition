@@ -3,13 +3,13 @@ using InterfaceComposition.REST.Payload.Serialization.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace InterfaceComposition.REST.Payload.Receivers
+namespace InterfaceComposition.REST.Payload.Retrievers
 {
-    public class JsonPayloadReceiver<TPayload> :
-        BasePayloadReceiver<TPayload>
+    public class JsonPayloadRetriever<TPayload> :
+        BasePayloadRetriever<TPayload>
         where TPayload : class
     {
-        public JsonPayloadReceiver(HttpRestClient restClient) : base(restClient)
+        public JsonPayloadRetriever(HttpRestClient restClient) : base(restClient)
         {
         }
 

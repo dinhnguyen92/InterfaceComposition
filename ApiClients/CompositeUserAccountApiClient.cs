@@ -2,7 +2,7 @@
 using InterfaceComposition.DataQueriers;
 using InterfaceComposition.DomainEntities.UserManagement;
 using InterfaceComposition.REST.ApiRouting;
-using InterfaceComposition.REST.Payload.Receivers;
+using InterfaceComposition.REST.Payload.Retrievers;
 using InterfaceComposition.REST.Payload.Senders;
 using InterfaceComposition.UserManagement;
 using System;
@@ -20,7 +20,7 @@ namespace InterfaceComposition.ApiClients
         IEntityRetrieverByUrlParamsViaApi<UserAccount, UserAccountUrlParamFilter>
     {
         private JsonPayloadSender DefaultPayloadSender { get; }
-        private JsonPayloadReceiver<UserAccount> UserAccountReceiver { get; }
+        private JsonPayloadRetriever<UserAccount> UserAccountReceiver { get; }
 
         public CompositeUserAccountApiClient(
             string apiBaseUrl,
@@ -28,7 +28,7 @@ namespace InterfaceComposition.ApiClients
             base(apiBaseUrl, "accounts", defaultRequestHeaders)
         {
             DefaultPayloadSender = new JsonPayloadSender(DefaultRestClient);
-            UserAccountReceiver = new JsonPayloadReceiver<UserAccount>(DefaultRestClient);
+            UserAccountReceiver = new JsonPayloadRetriever<UserAccount>(DefaultRestClient);
         }
 
         BasePayloadSender IEntityCreatorViaApi<UserAccount>.PayloadSender => DefaultPayloadSender;
@@ -51,7 +51,7 @@ namespace InterfaceComposition.ApiClients
             ((IEntityDeleterByIdViaApi<Guid>)this)
             .DeleteEntityAsync(id);
 
-        BasePayloadReceiver<UserAccount> IEntityRetrieverViaApi<UserAccount>.PayloadReceiver => UserAccountReceiver;
+        BasePayloadRetriever<UserAccount> IEntityRetrieverViaApi<UserAccount>.PayloadRetriever => UserAccountReceiver;
         EntityApiRouter IEntityRetrieverViaApi<UserAccount>.Router => DefaultEntityApiRouter;
         public Task<UserAccount> RetrieveUserAccountAsync(Guid id) =>
             ((IEntityRetrieverByIdViaApi<UserAccount, Guid>)this)
