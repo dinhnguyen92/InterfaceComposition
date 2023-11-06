@@ -1,5 +1,6 @@
 ﻿using InterfaceComposition.ApiClients;
 using InterfaceComposition.REST;
+using System.Collections.Generic;
 
 namespace InterfaceComposition
 {

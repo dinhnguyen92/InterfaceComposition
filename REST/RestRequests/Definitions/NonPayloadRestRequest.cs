@@ -1,4 +1,6 @@
 ﻿using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Net.Http;
 
 namespace InterfaceComposition.REST.RestRequests.Definitions
 {

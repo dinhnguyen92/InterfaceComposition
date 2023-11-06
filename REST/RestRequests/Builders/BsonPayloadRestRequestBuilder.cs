@@ -1,5 +1,6 @@
 ﻿using InterfaceComposition.REST.Payload.Serialization.Bson;
 using InterfaceComposition.REST.UrlParameters;
+using System.Net.Http;
 
 namespace InterfaceComposition.REST.RestRequests.Builders
 {

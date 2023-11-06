@@ -1,4 +1,6 @@
 ﻿using InterfaceComposition.REST.UrlParameters.Traits;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace InterfaceComposition.REST.UrlParameters
 {

@@ -1,6 +1,8 @@
 ﻿using InterfaceComposition.ApiClients;
 using InterfaceComposition.REST.ApiRouting;
 using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.DataMutators
 {

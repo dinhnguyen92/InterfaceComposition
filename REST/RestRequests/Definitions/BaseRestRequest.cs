@@ -1,5 +1,6 @@
 ﻿using InterfaceComposition.REST.UrlParameters;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Http;
 
 namespace InterfaceComposition.REST.RestRequests.Definitions
 {

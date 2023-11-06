@@ -2,6 +2,10 @@
 using InterfaceComposition.REST.Payload.Serialization.Json;
 using InterfaceComposition.REST.RestRequests.Builders;
 using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.ApiClients
 {

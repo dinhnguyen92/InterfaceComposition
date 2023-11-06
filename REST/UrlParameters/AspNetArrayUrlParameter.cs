@@ -1,4 +1,5 @@
 ﻿using InterfaceComposition.REST.UrlParameters.Traits;
+using System.Collections.Generic;
 
 namespace InterfaceComposition.REST.UrlParameters
 {

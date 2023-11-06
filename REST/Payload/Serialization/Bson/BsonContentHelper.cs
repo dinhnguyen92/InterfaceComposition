@@ -3,6 +3,9 @@ using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Net.Http;
+using System.IO;
 
 namespace InterfaceComposition.REST.Payload.Serialization.Bson
 {

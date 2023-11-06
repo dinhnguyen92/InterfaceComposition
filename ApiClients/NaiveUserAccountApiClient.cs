@@ -1,6 +1,9 @@
 ﻿using InterfaceComposition.DomainEntities.UserManagement;
 using InterfaceComposition.REST.Paging;
 using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.ApiClients
 {

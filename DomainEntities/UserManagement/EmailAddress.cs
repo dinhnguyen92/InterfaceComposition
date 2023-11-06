@@ -1,5 +1,6 @@
 ﻿using InterfaceComposition.DomainEntities.Core;
 using InterfaceComposition.Utils;
+using System;
 using System.Net.Mail;
 
 namespace InterfaceComposition.DomainEntities.KnowledgeEngine.Contact

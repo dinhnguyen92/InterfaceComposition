@@ -1,4 +1,7 @@
-﻿namespace InterfaceComposition.REST.UrlParameters
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace InterfaceComposition.REST.UrlParameters
 {
     public abstract class BaseArrayUrlParameter
     {

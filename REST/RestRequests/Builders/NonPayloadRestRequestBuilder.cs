@@ -1,5 +1,7 @@
 ﻿using InterfaceComposition.REST.RestRequests.Definitions;
 using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Net.Http;
 
 namespace InterfaceComposition.REST.RestRequests.Builders
 {

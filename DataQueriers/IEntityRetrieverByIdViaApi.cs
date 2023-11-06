@@ -1,4 +1,5 @@
 ﻿using InterfaceComposition.DomainEntities.Core;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.DataQueriers
 {

@@ -1,4 +1,6 @@
 ﻿using InterfaceComposition.REST.ApiRouting.UrlSegments;
+using System;
+using System.Collections.Generic;
 
 namespace InterfaceComposition.REST.ApiRouting
 {

@@ -1,5 +1,6 @@
 ﻿using InterfaceComposition.DataFilters;
 using InterfaceComposition.REST.UrlParameters;
+using System;
 
 namespace InterfaceComposition.DomainEntities.UserManagement
 {

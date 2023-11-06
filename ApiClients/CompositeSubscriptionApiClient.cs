@@ -5,6 +5,8 @@ using InterfaceComposition.REST.ApiRouting;
 using InterfaceComposition.REST.Paging;
 using InterfaceComposition.REST.Payload.Receivers;
 using InterfaceComposition.REST.Payload.Senders;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.ApiClients
 {

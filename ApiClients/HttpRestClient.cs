@@ -2,6 +2,10 @@
 using InterfaceComposition.REST.UrlParameters;
 using InterfaceComposition.REST.RestRequests.Builders;
 using InterfaceComposition.REST.RestRequests.Definitions;
+using System.Collections.Generic;
+using System.Net.Http;
+using System;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.ApiClients
 {

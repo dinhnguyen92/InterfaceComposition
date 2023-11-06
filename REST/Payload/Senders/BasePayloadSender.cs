@@ -1,6 +1,9 @@
 ﻿using InterfaceComposition.ApiClients;
 using InterfaceComposition.REST.RestRequests.Builders;
 using InterfaceComposition.REST.UrlParameters;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.REST.Payload.Senders
 {

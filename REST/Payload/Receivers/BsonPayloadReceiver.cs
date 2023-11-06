@@ -1,6 +1,9 @@
 ﻿using InterfaceComposition.ApiClients;
 using InterfaceComposition.REST.Payload.Serialization.Bson;
 using MongoDB.Bson;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.REST.Payload.Receivers
 {

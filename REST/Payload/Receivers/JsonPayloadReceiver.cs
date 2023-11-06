@@ -1,5 +1,7 @@
 ﻿using InterfaceComposition.ApiClients;
 using InterfaceComposition.REST.Payload.Serialization.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace InterfaceComposition.REST.Payload.Receivers
 {

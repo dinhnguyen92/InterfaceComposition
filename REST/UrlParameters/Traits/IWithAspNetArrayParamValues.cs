@@ -1,4 +1,6 @@
-﻿namespace InterfaceComposition.REST.UrlParameters.Traits
+﻿using System.Linq;
+
+namespace InterfaceComposition.REST.UrlParameters.Traits
 {
     public interface IWithAspNetArrayParamValues : IWithArrayUrlParameter
     {

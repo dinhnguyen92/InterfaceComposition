@@ -1,4 +1,6 @@
-﻿namespace InterfaceComposition.DomainEntities.Core
+﻿using System;
+
+namespace InterfaceComposition.DomainEntities.Core
 {
     public abstract class BaseEntityWithGuid : BaseEntityWithId<Guid>
     {
