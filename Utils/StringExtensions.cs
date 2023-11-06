@@ -141,59 +141,5 @@ namespace InterfaceComposition.Utils
         }
 
         #endregion
-
-
-        #region Plural/Singular
-
-        // For now, we only pluralize text that contains a single word
-        // TODO: maybe implement more sophisticated logic here (such as checking for words that are adjectives or already plural)
-        public static bool CanPluralize(this string text)
-        {
-            return text.WordCount() == 1;
-        }
-
-        // This only works with common cases, e.g. "y" -> "ies", "x" -> "xes"
-        // Also, this only works with texts containing a single word
-        public static string ToPlural(this string text)
-        {
-            if (text.EndsWithAnyIgnoreCase(new[] { "s", "ss", "sh", "ch", "x", "z", "o" }))
-            {
-                return text + "es";
-            }
-            if (text.EndsWithIgnoreCase("y"))
-            {
-                // If the letter before the ending "y" is a vowel, then we simply add "s"
-                if (text.Length >= 2 && text.ElementAt(text.Length - 2).IsVowel())
-                {
-                    return text + "s";
-                }
-                return text[0..^1] + "ies";
-            }
-            if (text.EndsWith("is"))
-            {
-                return text[0..^2] + "es";
-            }
-            if (text.EndsWith("on"))
-            {
-                return text[0..^2] + "a";
-            }
-            if (text.EndsWith("us"))
-            {
-                return text[0..^2] + "i";
-            }
-            return text + "s";
-        }
-
-        #endregion
-
-
-        #region Miscellaneous
-
-        public static int WordCount(this string text)
-        {
-            return text.SplitAsWords().Length;
-        }
-
-        #endregion
     }
 }
